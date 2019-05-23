@@ -1,11 +1,12 @@
 package com.acme.banking.dbo.ooad;
 
+import javax.persistence.EntityNotFoundException;
+
+import org.junit.Test;
+
 import com.acme.banking.dbo.ooad.dal.AccountRepository;
 import com.acme.banking.dbo.ooad.domain.Account;
 import com.acme.banking.dbo.ooad.service.ReportingService;
-import org.junit.Test;
-
-import javax.persistence.EntityNotFoundException;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.anyLong;

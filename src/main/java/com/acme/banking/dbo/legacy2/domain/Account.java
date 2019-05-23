@@ -6,11 +6,11 @@ package com.acme.banking.dbo.legacy2.domain;
  */
 public interface Account {
 
+    long getId();
+
     void withdraw(double amount);
 
     void deposit(double amount);
-
-    long getId();
 
     double getAmount();
     

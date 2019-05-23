@@ -16,6 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        TransferService transferService = new TransferService();
         AccountRepository accountRepository = new InMemoryAccountRepository();
 
         SavingAccount first = new SavingAccount(1, 100);
@@ -27,7 +28,7 @@ public class Main {
         System.out.println(reportingService.reportForAccount(1));
         System.out.println(reportingService.reportForAccount(2));
 
-        TransferService.transfer(first, second, 10);
+        transferService.transfer(first, second, 10);
 
         System.out.println(reportingService.reportForAccount(1));
         System.out.println(reportingService.reportForAccount(2));
