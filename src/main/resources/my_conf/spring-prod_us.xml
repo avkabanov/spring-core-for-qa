@@ -1,0 +1,16 @@
+<!--<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+             profile="us">
+    <beans:bean class="com.acme.banking.dbo.legacy2.dao.FileAccountRepository"
+                xmlns:beans="http://www.springframework.org/schema/beans"/>
+</beans:beans>-->
+
+
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+             profile="us"> <!-- TODO Spring profiles and configuration -->
+
+<beans:bean id="accountRepo" class="com.acme.banking.dbo.legacy2.dao.FileAccountRepository"/>
+</beans:beans>

@@ -1,11 +1,14 @@
 package com.acme.banking.dbo.ooad;
 
-import com.acme.banking.dbo.ooad.domain.Account;
-import com.acme.banking.dbo.ooad.domain.SavingAccount;
-import com.acme.banking.dbo.ooad.service.TransferService;
 import org.junit.Test;
 
-import static org.mockito.Mockito.*;
+import com.acme.banking.dbo.ooad.domain.Account;
+import com.acme.banking.dbo.ooad.service.TransferService;
+
+import static org.mockito.Mockito.anyDouble;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class TransferServiceTest {
     @Test

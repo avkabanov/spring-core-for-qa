@@ -1,7 +1,9 @@
 package com.acme.banking.dbo.spring.service;
 
-import com.acme.banking.dbo.spring.dao.AccountRepository;
-import com.acme.banking.dbo.spring.domain.Account;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,9 +12,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
+import com.acme.banking.dbo.spring.dao.AccountRepository;
+import com.acme.banking.dbo.spring.domain.Account;
 
 @Service //TODO @Component semantics
 @Scope("singleton") //TODO Scope semantics
@@ -35,7 +36,7 @@ public class ReportingService {
     public ReportingService(AccountRepository accounts) {
         this.accounts = accounts;
     }
-
+                                                       
     @PostConstruct //TODO Lifecycle semantics
     public void onCreate() {
         logger.info("ReportingService created");
